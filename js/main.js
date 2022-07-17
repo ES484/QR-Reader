@@ -6,11 +6,12 @@ copyBtn = item.querySelector('.copy');
 closeBtn = item.querySelector('.close')
 
 
-const fetchRequest = (formData, file) =>{
+const fetchRequest = async (formData, file) =>{
     inforText.innerText = "Scanning QR Code...";
-    fetch("http://api.qrserver.com/v1/read-qr-code/", 
+    fetch("https://api.qrserver.com/v1/read-qr-code/", 
     {
-        method: "POST", body: formData
+        method: "POST", 
+        body: formData,
     }).then(res => res.json()).then(result=>{
         result = result[0].symbol[0].data;
         inforText.innerText = result? "Upload QR Code to scan": "Couldn't Scan QR Code";
