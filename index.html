@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Reader</title>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-10 m-auto">
+                <div class="item">
+                    <form>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="w-75">
+                                <i class="fa-solid fa-cloud-arrow-up"></i>
+                                <p>Upload QR Code to Scan</p>
+                            </div>
+                            <div class="w-25">
+                                <input type="file" name="file" id="file" hidden>
+                                <img class="qr-img" src="" alt="QR">
+                            </div>
+                        </div>
+                    </form>
+                    <div class="qr-data">
+                        <div class="form-floating">
+                            <textarea class="form-control" id="floatingTextarea" style="height: 100px" disabled></textarea>
+                            <label for="floatingTextarea"></label>
+                          </div>
+                        <button class="close btn btn-danger">Close</button>
+                        <button class="copy btn btn-info">Copy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+body
+{
+    background-color:dimgray
+}
+.item
+{
+    background-color: #F2F2F2;
+    width: 80%;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 30px 20px;
+    cursor: pointer;
+}
+.qr-img
+{
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+.qr-data
+{
+    max-height: 0;
+    transition: max-height 0.15s ease-out;
+    overflow: hidden;
+}
+.active .qr-img
+{
+    display: block
+}
+.active .qr-data
+{
+    max-height: 500px;
+    transition: max-height 0.25s ease-in;
+}
+
+
